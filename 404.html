@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — Page Not Found</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{
+    height:100%;
+    overflow:hidden;
+    background:#050505;
+    font-family:Sora,'Segoe UI',Arial,sans-serif;
+    color:#fff
+  }
+  body{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative
+  }
+  body:before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+      radial-gradient(circle at center,rgba(255,255,255,.03),transparent 55%),
+      linear-gradient(rgba(255,255,255,.015) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(255,255,255,.015) 1px,transparent 1px);
+    background-size:100% 100%,42px 42px,42px 42px;
+    animation:grid 18s linear infinite
+  }
+  @keyframes grid{
+    from{transform:translateY(0)}
+    to{transform:translateY(42px)}
+  }
+  .card{
+    position:relative;
+    z-index:2;
+    width:min(680px,92%);
+    padding:52px;
+    background:rgba(14,14,14,.82);
+    border:1px solid #222;
+    border-radius:28px;
+    backdrop-filter:blur(14px);
+    box-shadow:0 0 80px rgba(0,0,0,.7);
+    text-align:center
+  }
+  .badge{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:8px 16px;
+    border-radius:999px;
+    background:#111;
+    border:1px solid #262626;
+    font-size:12px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:#bdbdbd;
+    margin-bottom:28px
+  }
+  h1{
+    font-size:96px;
+    font-weight:800;
+    line-height:1;
+    margin-bottom:18px;
+    letter-spacing:-4px;
+    background:linear-gradient(180deg,#fff,#666);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text
+  }
+  h2{
+    font-size:22px;
+    font-weight:600;
+    color:#fff;
+    margin-bottom:14px;
+    letter-spacing:-.3px
+  }
+  p{
+    font-size:15px;
+    line-height:1.7;
+    color:#9f9f9f;
+    margin-bottom:32px
+  }
+  .actions{
+    display:flex;
+    gap:12px;
+    justify-content:center;
+    flex-wrap:wrap
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:12px 22px;
+    border-radius:12px;
+    font-size:14px;
+    font-weight:600;
+    text-decoration:none;
+    transition:all .2s;
+    border:1px solid #262626
+  }
+  .btn-primary{
+    background:#fff;
+    color:#000;
+    border-color:#fff
+  }
+  .btn-primary:hover{
+    background:#e5e5e5;
+    transform:translateY(-1px)
+  }
+  .btn-secondary{
+    background:#111;
+    color:#fff
+  }
+  .btn-secondary:hover{
+    background:#1a1a1a;
+    transform:translateY(-1px)
+  }
+  .footer{
+    margin-top:32px;
+    padding-top:20px;
+    border-top:1px solid #1f1f1f;
+    font-size:12px;
+    color:#555;
+    letter-spacing:.05em
+  }
+  @media(max-width:640px){
+    .card{padding:34px 24px}
+    h1{font-size:64px}
+    h2{font-size:18px}
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="badge">Error 404</div>
+  <h1>404</h1>
+  <h2>Page Not Found</h2>
+  <p>The page you are looking for doesn't exist or has been moved. Please check the URL or head back to the homepage.</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="/">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      Back to Home
+    </a>
+    <a class="btn btn-secondary" href="/au/">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      Go to App
+    </a>
+  </div>
+  <div class="footer">Error Code: 404 · Resource Not Found</div>
+</div>
+</body>
+</html>
