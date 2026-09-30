@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Server Busy</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{
+height:100%;
+overflow:hidden;
+background:#050505;
+font-family:Inter,Segoe UI,Arial,sans-serif;
+color:#fff
+}
+body{
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative
+}
+body:before{
+content:"";
+position:absolute;
+inset:0;
+background:
+radial-gradient(circle at center,rgba(255,255,255,.03),transparent 55%),
+linear-gradient(rgba(255,255,255,.015) 1px,transparent 1px),
+linear-gradient(90deg,rgba(255,255,255,.015) 1px,transparent 1px);
+background-size:100% 100%,42px 42px,42px 42px;
+animation:grid 18s linear infinite
+}
+@keyframes grid{
+from{transform:translateY(0)}
+to{transform:translateY(42px)}
+}
+.card{
+position:relative;
+z-index:2;
+width:min(760px,92%);
+padding:52px;
+background:rgba(14,14,14,.82);
+border:1px solid #222;
+border-radius:28px;
+backdrop-filter:blur(14px);
+box-shadow:0 0 80px rgba(0,0,0,.7)
+}
+.badge{
+display:inline-flex;
+align-items:center;
+gap:10px;
+padding:8px 16px;
+border-radius:999px;
+background:#111;
+border:1px solid #262626;
+font-size:12px;
+letter-spacing:.18em;
+text-transform:uppercase;
+color:#bdbdbd;
+margin-bottom:28px
+}
+h1{
+font-size:58px;
+font-weight:800;
+line-height:1;
+margin-bottom:28px;
+letter-spacing:-2px
+}
+.busy{
+color:#fff
+}
+.wire{
+display:flex;
+align-items:center;
+justify-content:center;
+margin:22px 0 38px;
+height:110px;
+position:relative
+}
+.left,.right{
+height:4px;
+width:42%;
+background:linear-gradient(90deg,#777,#ddd,#888);
+position:relative
+}
+.left{
+clip-path:polygon(0 40%,88% 40%,100% 0,100% 100%,88% 60%,0 60%)
+}
+.right{
+clip-path:polygon(0 0,12% 40%,100% 40%,100% 60%,12% 60%,0 100%)
+}
+.break{
+width:80px;
+height:80px;
+position:relative;
+display:flex;
+align-items:center;
+justify-content:center
+}
+.spark{
+position:absolute;
+width:4px;
+height:28px;
+background:#fff;
+border-radius:10px;
+transform-origin:center bottom;
+opacity:0;
+animation:spark 1.2s infinite
+}
+.spark:nth-child(1){transform:rotate(0deg) translateY(-18px);animation-delay:.1s}
+.spark:nth-child(2){transform:rotate(45deg) translateY(-18px);animation-delay:.25s}
+.spark:nth-child(3){transform:rotate(90deg) translateY(-18px);animation-delay:.45s}
+.spark:nth-child(4){transform:rotate(135deg) translateY(-18px);animation-delay:.65s}
+.spark:nth-child(5){transform:rotate(180deg) translateY(-18px);animation-delay:.85s}
+.spark:nth-child(6){transform:rotate(225deg) translateY(-18px);animation-delay:1s}
+.spark:nth-child(7){transform:rotate(270deg) translateY(-18px);animation-delay:1.15s}
+.spark:nth-child(8){transform:rotate(315deg) translateY(-18px);animation-delay:1.3s}
+@keyframes spark{
+0%,100%{opacity:0;transform:scale(.2)}
+35%{
+opacity:1;
+box-shadow:
+0 0 12px #fff,
+0 0 24px #fff,
+0 0 40px #ffb347,
+0 0 70px #ff8800;
+}
+55%{opacity:0}
+}
+p{
+font-size:17px;
+line-height:1.9;
+color:#9f9f9f
+}
+.highlight{
+color:#fff;
+font-weight:600
+}
+.footer{
+display:flex;
+justify-content:space-between;
+margin-top:38px;
+padding-top:22px;
+border-top:1px solid #1f1f1f;
+font-size:13px;
+color:#666
+}
+.dot{
+display:inline-block;
+width:10px;
+height:10px;
+border-radius:50%;
+background:#39d98a;
+margin-right:8px;
+box-shadow:0 0 16px #39d98a;
+animation:pulse 2s infinite
+}
+@keyframes pulse{
+50%{transform:scale(1.35);opacity:.5}
+}
+@media(max-width:700px){
+.card{padding:34px}
+h1{font-size:40px}
+.wire{height:90px}
+p{font-size:15px}
+.footer{
+flex-direction:column;
+gap:10px
+}
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+
+<div class="badge">System Status</div>
+
+<h1><span class="busy">SERVER BUSY</span></h1>
+
+<div class="wire">
+<div class="left"></div>
+<div class="break">
+<span class="spark"></span>
+<span class="spark"></span>
+<span class="spark"></span>
+<span class="spark"></span>
+<span class="spark"></span>
+<span class="spark"></span>
+<span class="spark"></span>
+<span class="spark"></span>
+</div>
+<div class="right"></div>
+</div>
+
+<p>
+The site is currently facing an unexpected issue. Our specialist team is actively working on resolving the bugs and errors as quickly as possible.
+</p>
+
+<br>
+
+<p>
+<span class="highlight">Rest assured, your data is 101% safe with us.</span> We have just encountered a bug, and there is no impact on your stored information. Thank you for your patience while we restore normal service.
+</p>
+
+<div class="footer">
+<div><span class="dot"></span>Engineering Team Active</div>
+<div>Status: Reactiving Servers in Progress.</div>
+</div>
+
+</div>
+
+</body>
+</html>
