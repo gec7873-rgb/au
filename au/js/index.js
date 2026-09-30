@@ -1,4 +1,3 @@
-// ── SECURITY LAYER - BY TOXIC
 (function securityLayer() {
   document.addEventListener('contextmenu', e => e.preventDefault());
   document.addEventListener('keydown', e => {
@@ -15,13 +14,13 @@ window.addEventListener('pageshow', function (event) {
   document.getElementById('aov').classList.remove('show');
 });
 
-function goLogin(e) {
+function openLogin(e) {
   e.preventDefault();
   document.getElementById('lov').classList.add('show');
   setTimeout(function () { window.location.href = 'login.html'; }, 1800);
 }
 
-function goApply(e) {
+function openApply(e) {
   e.preventDefault();
   document.getElementById('aov').classList.add('show');
   setTimeout(function () { window.location.href = 'apply.html'; }, 1800);
