@@ -7,7 +7,7 @@
 
     { "source": "/au", "destination": "/au/index.html" },
     { "source": "/au/", "destination": "/au/index.html" },
-    { "source": "/au/login", "destination": "/au/login.html" },
+    { "source": "/login", "destination": "/au/login.html" },
     { "source": "/au/apply", "destination": "/au/apply.html" },
 
     { "source": "/css/index.css", "destination": "/au/css/index.css" },
