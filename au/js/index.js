@@ -17,7 +17,7 @@ window.addEventListener('pageshow', function (event) {
 function openLogin(e) {
   e.preventDefault();
   document.getElementById('lov').classList.add('show');
-  setTimeout(function () { window.location.href = 'login.html'; }, 1800);
+  setTimeout(function () { window.location.href = 'au/login.html'; }, 1800);
 }
 
 function openApply(e) {
