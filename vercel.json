@@ -9,6 +9,10 @@
     { "source": "/au/(.*)", "destination": "/au/$1" },
     { "source": "/(.*)", "destination": "/index.html" }
   ],
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/404.html", "status": 404 }
+  ],
   "headers": [
     {
       "source": "/au/(.*)",
