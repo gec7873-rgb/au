@@ -23,7 +23,7 @@ function openLogin(e) {
 function openApply(e) {
   e.preventDefault();
   document.getElementById('aov').classList.add('show');
-  setTimeout(function () { window.location.href = 'apply.html'; }, 1800);
+  setTimeout(function () { window.location.href = 'au/apply.html'; }, 1800);
 }
 
 function makeSlider(trackId, dotsId, prevId, nextId, autoMs) {
