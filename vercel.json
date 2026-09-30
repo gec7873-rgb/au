@@ -6,12 +6,20 @@
     { "source": "/au", "destination": "/au/index.html" },
     { "source": "/au/login", "destination": "/au/login.html" },
     { "source": "/au/apply", "destination": "/au/apply.html" },
-    { "source": "/au/(.*)", "destination": "/au/$1" },
-    { "source": "/(.*)", "destination": "/index.html" }
-  ],
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/404.html", "status": 404 }
+
+    { "source": "/css/index.css", "destination": "/au/css/index.css" },
+    { "source": "/css/login.css", "destination": "/au/css/login.css" },
+    { "source": "/css/apply.css", "destination": "/au/css/apply.css" },
+
+    { "source": "/js/index.js", "destination": "/au/js/index.js" },
+    { "source": "/js/login.js", "destination": "/au/js/login.js" },
+    { "source": "/js/apply.js", "destination": "/au/js/apply.js" },
+
+    { "source": "/au_logo.svg", "destination": "/au/au_logo.svg" },
+
+    { "source": "/assets/images/(.*)", "destination": "/au/assets/images/$1" },
+
+    { "source": "/(.*)", "destination": "/404.html" }
   ],
   "headers": [
     {
