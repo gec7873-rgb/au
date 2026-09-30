@@ -3,7 +3,10 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/au", "destination": "/au/index.html" },
+    { "source": "/", "destination": "/index.html" },
+
+    { "source": "/au", "destination": "/au/home.html" },
+    { "source": "/au/", "destination": "/au/home.html" },
     { "source": "/au/login", "destination": "/au/login.html" },
     { "source": "/au/apply", "destination": "/au/apply.html" },
 
@@ -15,10 +18,7 @@
     { "source": "/js/login.js", "destination": "/au/js/login.js" },
     { "source": "/js/apply.js", "destination": "/au/js/apply.js" },
 
-    { "source": "/au_logo.svg", "destination": "/au/au_logo.svg" },
-
-    { "source": "/assets/images/(.*)", "destination": "/au/assets/images/$1" },
-
+    { "source": "/au/(.*)", "destination": "/au/$1" },
     { "source": "/(.*)", "destination": "/404.html" }
   ],
   "headers": [
