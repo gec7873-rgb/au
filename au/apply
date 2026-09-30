@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <title>𝗔𝗨 𝗕𝗮𝗻𝗸  – Apply Online</title>
+  <title>Apply Online</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap"
@@ -27,8 +27,8 @@
   </div>
   <nav class="navbar" style="width:100%;max-width:100%">
     <a class="nav-logo" href="index.html">
-      <img src="https://www.au.bank.in/content/dam/aubank/in/en/header/AU-Logo_H30px-1.svg" alt="AU Bank">
-      <span class="nav-logo-text">𝗔𝗨 𝗕𝗮𝗻𝗸</span>
+      <img src="https://cdn.brandfetch.io/id78YVtrRp/theme/light/logo.svg" alt="Bank">
+      <span class="nav-logo-text">Bank</span>
     </a>
     <div class="nav-right">
       <div class="status-circles">
